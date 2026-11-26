@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand solid colors - strictly no gradients */
+  --navy-primary: #102D46;
+  --navy-secondary: #183F5B;
+  --teal-primary: #147D78;
+  --teal-deep: #105F5B;
+  --bg-main: #FFFFFF;
+  --bg-alt: #F3F6F5;
+  --border-soft: #E1E7E8;
+  --text-primary: #172B3A;
+  --text-secondary: #647580;
+  --verified-green: #247A52;
+  --pending-amber: #A66B19;
+
+  /* Typography */
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-bengali: 'Noto Sans Bengali', 'Hind Siliguri', 'SolaimanLipi', 'Kalpurush', sans-serif;
+}
+
+@theme inline {
+  --color-navy-primary: var(--navy-primary);
+  --color-navy-secondary: var(--navy-secondary);
+  --color-teal-primary: var(--teal-primary);
+  --color-teal-deep: var(--teal-deep);
+  --color-bg-main: var(--bg-main);
+  --color-bg-alt: var(--bg-alt);
+  --color-border-soft: var(--border-soft);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-verified-green: var(--verified-green);
+  --color-pending-amber: var(--pending-amber);
+
+  --font-sans: var(--font-inter);
+  --font-bengali: var(--font-bengali);
+}
+
+/* Base styles adhering strictly to design rules */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Bengali locale font optimization */
+[lang="bn"],
+[data-locale="bn"] {
+  font-family: var(--font-bengali);
+}
+
+/* Standardized container & borders */
+.container-custom {
+  width: 100%;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
