@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { Hospital } from "@/types";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { X } from "lucide-react";
 
@@ -215,7 +214,7 @@ export function HospitalsListClient({ hospitals }: HospitalsListClientProps) {
                 key={hospital.id}
                 className="bg-white border border-[#E1E7E8] rounded-lg overflow-hidden flex flex-col hover:border-[#147D78]/50 transition-colors shadow-2xs group"
               >
-                {/* Hospital Photo & Badges */}
+                {/* Hospital Photo */}
                 <div className="relative h-48 w-full bg-[#102D46]/10 overflow-hidden">
                   <Image
                     src={hospital.image}
@@ -224,14 +223,6 @@ export function HospitalsListClient({ hospitals }: HospitalsListClientProps) {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover group-hover:scale-102 transition-transform duration-300"
                   />
-                  <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 z-10">
-                    <Badge variant="verified" size="sm">
-                      <svg className="w-3 h-3 mr-1 inline" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {t("verifiedPartner")}
-                    </Badge>
-                  </div>
                   <div className="absolute bottom-3 left-3 z-10">
                     <span className="px-2.5 py-1 bg-[#102D46]/90 text-white text-xs font-medium rounded-sm backdrop-blur-xs">
                       {city}, {country}

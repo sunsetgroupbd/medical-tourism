@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { Stethoscope, Microscope, Scale, Globe2 } from "lucide-react";
 
@@ -138,9 +137,6 @@ export default async function MedicalTourismPage({
 
         {/* Destinations Overview Quick Links */}
         <div className="bg-[#102D46] text-white rounded-lg p-8 lg:p-12 text-center space-y-6">
-          <Badge variant="teal" size="md">
-            {locale === "bn" ? "৬টি প্রধান আন্তর্জাতিক গন্তব্য" : "6 Premier International Destinations"}
-          </Badge>
           <h2 className="text-2xl sm:text-3xl font-bold max-w-2xl mx-auto">
             {locale === "bn"
               ? "চীন, থাইল্যান্ড, মালয়েশিয়া, সিঙ্গাপুর, তুরস্ক ও ভারতের শীর্ষ হাসপাতাল"

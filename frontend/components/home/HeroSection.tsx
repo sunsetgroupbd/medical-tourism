@@ -74,12 +74,6 @@ export const HeroSection: React.FC = () => {
 
       <div className="container-custom relative z-10 py-16 sm:py-20 lg:py-24">
         <div className="max-w-2xl xl:max-w-3xl space-y-6">
-          {/* Eyebrow */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-[#183F5B] text-xs font-semibold text-emerald-300 uppercase tracking-widest border border-white/10">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#147D78]" />
-            <span>{t("eyebrow")}</span>
-          </div>
-
           {/* Main Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[52px] font-bold text-white tracking-tight leading-[1.18]">
             {t("title")}

@@ -33,6 +33,7 @@ export default async function DestinationsPage({
   setRequestLocale(locale);
 
   const t = await getTranslations("destinationsPage");
+  const tCommon = await getTranslations("common");
   const destinations = await getDestinations();
 
   return (
@@ -97,7 +98,7 @@ export default async function DestinationsPage({
             </div>
             <div className="lg:col-span-4 flex justify-start lg:justify-end">
               <Button href="/inquiry" variant="teal" size="lg">
-                ফ্রি কেস রিভিউ ও সহায়তা
+                {tCommon("freeCaseReview")}
               </Button>
             </div>
           </div>

@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
-import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { MapPin, Lock } from "lucide-react";
 
@@ -147,10 +146,6 @@ export default async function ContactPage({ params }: ContactPageProps) {
           {/* Right Column: Case Review Direct Access Box */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#102D46] text-white rounded-lg p-6 lg:p-8 space-y-5">
-              <Badge variant="teal" size="sm">
-                No Login Required
-              </Badge>
-
               <h3 className="text-xl font-bold leading-snug">
                 {locale === "bn"
                   ? "দ্রুততম উপায়ে বিশেষজ্ঞ চিকিৎসকের মতামত ও কোটেশন চান?"
